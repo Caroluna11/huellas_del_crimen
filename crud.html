@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+  <header>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
         <div class="container-fluid">
@@ -51,18 +53,68 @@
             </div>
         </div>
     </nav>
-
-    <!-- editor codigo -->
-    <h2>Ejemplo de código:</h2>
-    <div class="contenedor-codigo">
-        <pre><code>
-            // codigo de CRUD
-            funcion imprimir(){
-
-            }
-            console.log(saludar());
-        </code></pre>
+  </header>
+    
+    <div class="quienes-somos">
+        <h1>CRUD</h1>
+        <p>
+          Se muestra ejemplo de codigo del CRUD (Create, Read, Update, Delete) para la tabla usuarios de la base de datos del juego Huellas del crimen.
+        </p>
     </div>
+
+    <div class="crud-container">
+    <h1>Gestión de Usuarios</h1>
+
+    <form>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="nickname" class="form-label">Nickname</label>
+          <input type="text" class="form-control" id="nickname" placeholder="Ej. Detective_Zero">
+        </div>
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="correo" placeholder="usuario@correo.com">
+        </div>
+        <div class="col-md-6">
+          <label for="pais" class="form-label">País</label>
+          <input type="text" class="form-control" id="pais" placeholder="Colombia">
+        </div>
+        <div class="col-md-6">
+          <label for="fecha" class="form-label">Fecha de Registro</label>
+          <input type="date" class="form-control" id="fecha">
+        </div>
+      </div>
+
+      <div class="text-center mt-4 d-flex justify-content-center gap-3">
+        <button type="submit" class="btn btn-custom px-4">Guardar Usuario</button>
+        <button type="button" class="btn btn-secondary-custom px-4">Consultar Usuarios</button>
+      </div>
+    </form>
+
+    <table class="table table-dark table-striped mt-5 text-center">
+      <thead>
+        <tr>
+          <th>Nickname</th>
+          <th>Correo</th>
+          <th>País</th>
+          <th>Fecha Registro</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Detective_Zero</td>
+          <td>zero@huellas.com</td>
+          <td>Colombia</td>
+          <td>2025-11-01</td>
+          <td>
+            <button class="btn-action btn-edit">Editar</button>
+            <button class="btn-action btn-delete">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
     <!-- Footer -->
   <footer class="bg-dark text-light pt-4">
